@@ -72,7 +72,7 @@ func (g *Game) Tapped(ev *fyne.PointEvent) {
 	}
 	min := len(*g.Board) * len((*g.Board)[0])
 	for _, direction := range g.fourDirections {
-		d := direction.RP.DistanceOf(int(ev.AbsolutePosition.X), int(ev.AbsolutePosition.Y))
+		d := direction.RP.DistanceOf(int(ev.Position.X), int(ev.Position.Y))
 		if d < min {
 			g.snake.direct = direction.D.Clone()
 			min = d
@@ -80,6 +80,7 @@ func (g *Game) Tapped(ev *fyne.PointEvent) {
 	}
 
 }
+
 
 func (g *Game) TappedSecondary( *fyne.PointEvent) {}
 func (g *Game) normalButtonFunction(pause *widget.Button) func() {
