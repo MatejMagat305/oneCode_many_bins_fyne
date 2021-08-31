@@ -14,7 +14,7 @@ func main() {
 	w.SetContent(container.NewVBox(
 		hello,
 		widget.NewButton("Hi!", func() {
-			hello.SetText("hello :) from windows")
+			hello.SetText("hello :) from go")
 		}),
 	))
 
