@@ -121,11 +121,11 @@ func (g *Game) BuildUI() fyne.CanvasObject {
 	g.PauseButton = pause
 	pause.OnTapped = g.normalButtonFunction(pause)
 	gameController := container.New(layout.NewBorderLayout(buttons[0], buttons[1], buttons[2], buttons[3]),
-		buttons...)
+		buttons[0], buttons[1], buttons[2], buttons[3], g)
 	for i := 0; i < len(buttons); i++ {
 		buttons[i].Resize(fyne.NewSize(50,50))
 	}
-	return container.New(layout.NewBorderLayout(down, gameController, nil, nil), down, gameController, g)
+	return container.New(layout.NewBorderLayout(down, nil, nil, nil), down, gameController)
 }
 
 func (g *Game) pixelDensity() float32 {
