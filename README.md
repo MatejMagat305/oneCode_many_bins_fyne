@@ -1,5 +1,5 @@
 # oneCode_many_bins_fyne
-options commands for build :
+options commands for build(you will need C compiler, I recomend m2sys on windows or other gcc on mac and linux) :
 1. go build -ldflags "-w -s -H=windowsgui"
 2.  upx --ultra-brute
 3. fyne package -os os -icon icon -name ....
