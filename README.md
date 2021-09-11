@@ -1,4 +1,5 @@
 # oneCode_many_bins_fyne
+The first of all I recomend https://developer.fyne.io/started/, 
 options commands for build(you will need C compiler, I recomend m2sys on windows or other gcc on mac and linux) :
 1. go build -ldflags "-w -s -H=windowsgui"
 2.  upx --ultra-brute
