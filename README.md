@@ -4,6 +4,6 @@ The first of all I recomend https://developer.fyne.io/started/,
 options commands for build(you will need C compiler, I recomend m2sys on windows or other gcc on mac and linux) :
 1. go build -ldflags "-w -s -H=windowsgui"
 2.  upx --ultra-brute
-3. fyne package -os os -icon icon -name ....
-4.  fyne package -os andoid -icon some_icon_name -name some_name -release -appID some_package_name
-5. (for apk must have ndk for example in linux set) export ANDROID_HOME=$HOME/Android/Sdk; export PATH=$PATH:$ANDROID_HOME/tools
+3. (for apk must have ndk for example in linux set) export ANDROID_HOME=$HOME/Android/Sdk; export PATH=$PATH:$ANDROID_HOME/tools
+4. fyne package -os android -icon some_icon_name -name some_name -release -appID some_package_name
+5. on termux you can follow: https://github.com/MatejMagat305/fyne-termux
